@@ -260,7 +260,7 @@ const withToolbarButton = createHigherOrderComponent(BlockEdit => {
           var selectionID = document.getSelection().focusNode.parentElement.id.split("block-")[1];
 var index = wp.data.select('core/block-editor').getBlocks().map(function(block) { return block.clientId == selectionID; }).indexOf(true) ;
 const newBlock = wp.blocks.createBlock( "core/html", {
-  content:"<li>First</li><li>Second</li><li>Third</li>",
+  content:"<ol><li>First</li><li>Second</li><li>Third</li></ol>",
 });
 wp.data.dispatch("core/block-editor").insertBlocks(newBlock, index);
           }, 300);
